@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: var(--color-primary);
+ 
+}
+:root {
+  --color-primary: #fff;
+  --color-secondary: #000;
+  --sytle-color: hsl(268, 45%, 41%);
+}
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  color: aliceblue;
+  border-bottom: 0.5px solid #374151;
+}
+header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: black;
+}
+header p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+  color: var(--sytle-color);
+  line-height: 1%;
+  font-weight: 400;
+}
+.container #dfPessoas form{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: aliceblue;
+}
+.container #dfPessoas label {
+  display: flex;
+  color: black;
+  margin-top: 0.5rem;
+  
+}
+ input {
+  padding: 6px 6px;
+  outline: none;
+  border: 1px solid #bbb;
+  border-radius: 9px;
+  display: inline-block;
+}
+#btn {
+  background: var(--sytle-color);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 9px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 3rem;
+}
+@media screen and (max-width: 1024px) {
+  .container #dfPessoas form {
+    flex-direction: column;
+    text-align: end;
+    padding: 10px;
+
+  }
+  label {
+    margin-top: 1rem;
+  }
+  #dfPessoas input {
+    width: 100%;
+    padding: 10px;
+  }
+  #btn {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+  
