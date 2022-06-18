@@ -73,7 +73,20 @@ header p {
   cursor: pointer;
   width: 3rem;
 }
-@media screen and (max-width: 1024px) {
+#btn:hover{
+  background-color: #7a3791;
+}
+@media screen and (max-width: 980px) {
+  form{
+      width: 50%;
+      display: flex;
+      justify-content: center;
+  }
+  #dfPessoas{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+  }
   .container #dfPessoas form {
     flex-direction: column;
     text-align: end;
@@ -92,7 +105,7 @@ header p {
     margin-top: 1rem;
   }
 }
-
+ 
 .table-wrapper{
     margin: 4rem;
 }
@@ -199,4 +212,3 @@ header p {
         text-align: center;
     }
 }
-  

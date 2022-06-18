@@ -1,116 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table One</title>
   <link rel="stylesheet" href="style.css">
-  <title>Document</title>
 </head>
+
 <body>
   <div class="container">
-   <header>
-    <h2>Table One</h2>
-    <p>Girls magic code</p>
-  </header>
-  <div id="dfPessoas">
-    <form name="fPessoas">
-      <label for="name">Nome</label>
-      <input type="text" placeholder="nome" name="name">
-      <label for="sobrenome">Sobrenome</label>
-      <input type="text" placeholder="sobrenome" name="sobrenome">
-      <label for="email">Email</label>
-      <input type="text" placeholder="email" name="email">
-      <label for="ra">Ra</label>
-      <input type="text" placeholder="ra" name="ra">
-      <input type="button" id="btn" value="Ir">
-    </form>
-  </div>
-  <div class="table-wrapper">
-    <table class="fl-table">
+    <header>
+      <h2>Table One</h2>
+      <p>Girls magic code</p>
+    </header>
+    <div id="dfPessoas">
+      <form name="fPessoas">
+        <label for="nome">Nome</label>
+        <input type="text" placeholder="Nome" name="txtnome">
+        <label for="sobrenome">Sobrenome</label>
+        <input type="text" placeholder="Sobrenome" name="txtsobrenome">
+        <label for="email">Email</label>
+        <input type="text" placeholder="Email" name="txtemail">
+        <label for="ra">Ra</label>
+        <input type="text" placeholder="Ra" name="txtra">
+        <input type="button" id="btn" value="Ir"
+          onclick="cadPessoa(txtnome.value, txtsobrenome.value, txtemail.value, txtra.value)">
+      </form>
+    </div>
+    <div class="table-wrapper" id="table-wrapper">
+      <table class="fl-table" id="table">
         <thead>
-        <tr>
-            <th>Header 1</th>
-            <th>Header 2</th>
-            <th>Header 3</th>
-            <th>Header 4</th>
-            <th>Header 5</th>
-        </tr>
+          <tr>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th>Email</th>
+            <th>Ra</th>
+          </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>Content 1</td>
-            <td>Content 1</td>
-            <td>Content 1</td>
-            <td>Content 1</td>
-            <td>Content 1</td>
-        </tr>
-        <tr>
-            <td>Content 2</td>
-            <td>Content 2</td>
-            <td>Content 2</td>
-            <td>Content 2</td>
-            <td>Content 2</td>
-        </tr>
-        <tr>
-            <td>Content 3</td>
-            <td>Content 3</td>
-            <td>Content 3</td>
-            <td>Content 3</td>
-            <td>Content 3</td>
-        </tr>
-        <tr>
-            <td>Content 4</td>
-            <td>Content 4</td>
-            <td>Content 4</td>
-            <td>Content 4</td>
-            <td>Content 4</td>
-        </tr>
-        <tr>
-            <td>Content 5</td>
-            <td>Content 5</td>
-            <td>Content 5</td>
-            <td>Content 5</td>
-            <td>Content 5</td>
-        </tr>
-        <tr>
-            <td>Content 6</td>
-            <td>Content 6</td>
-            <td>Content 6</td>
-            <td>Content 6</td>
-            <td>Content 6</td>
-        </tr>
-        <tr>
-            <td>Content 7</td>
-            <td>Content 7</td>
-            <td>Content 7</td>
-            <td>Content 7</td>
-            <td>Content 7</td>
-        </tr>
-        <tr>
-            <td>Content 8</td>
-            <td>Content 8</td>
-            <td>Content 8</td>
-            <td>Content 8</td>
-            <td>Content 8</td>
-        </tr>
-        <tr>
-            <td>Content 9</td>
-            <td>Content 9</td>
-            <td>Content 9</td>
-            <td>Content 9</td>
-            <td>Content 9</td>
-        </tr>
-        <tr>
-            <td>Content 10</td>
-            <td>Content 10</td>
-            <td>Content 10</td>
-            <td>Content 10</td>
-            <td>Content 10</td>
-        </tr>
+
+          <tr>
+          </tr>
         <tbody>
-    </table>
-</div>
+      </table>
+    </div>
   </div>
+  <script src="script.js"></script>
 </body>
+
 </html>
