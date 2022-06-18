@@ -18,19 +18,28 @@ function cadPessoa(nome, sobrenome, email, ra) {
     }
   })
   
+  let validateEmail = (email) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+  };
 
-  if(nome === "" || sobrenome === "" || email === "" || ra === "") { // Verifica se os campos estão vazios
-    msgError.innerHTML = "Preencha todos os campos!"; // Exibe mensagem de erro
+
+  if (nome === "" ) { // Verifica se o nome está vazio
+    msgError.innerHTML = "Preencha o nome!"; // Exibe mensagem de erro
     return;
-  } else if (ra.length !== 8 ) { // Verifica se o RA tem 8 caracteres
-    msgError.innerHTML = "RA deve conter 8 caracteres!";  
+    } else if (sobrenome === "" ) { // Verifica se o sobrenome está vazio   (sobrenome)
+    msgError.innerHTML = "Preencha o sobrenome!"; // Exibe mensagem de erro
     return;
-  } else if (email.indexOf('@') === -1) { // verifica se existe o @
-    msgError.innerHTML = "Email inválido!"; //se não existir, mostra mensagem de erro
-    return; // se não existir, retorna
-  } else if (email.indexOf('.') === -1) { // verifica se existe o .
-    msgError.innerHTML = "Email inválido!"; //se não existir, mostra mensagem de erro
-    return; // se não existir, retorna
+  }
+  else if (ra.length !== 8 ) { // Verifica se o RA tem 8 caracteres
+    msgError.innerHTML = `O RA deve ter 8 caracteres!`; // Exibe mensagem de erro
+    return;
+  } else if (!validateEmail(email)) { // Verifica se o email é valido
+    msgError.innerHTML = "Email inválido!";
+    return;
   } else if (ifExistePessoa.length > 0) { // verifica se existe alguma pessoa com o mesmo nome, sobrenome, email ou ra
     msgError.innerHTML = "Pessoa já cadastrada!"; //se existir, mostra mensagem de erro
     return; // se existir, retorna
@@ -65,6 +74,8 @@ function cadPessoa(nome, sobrenome, email, ra) {
     let qtdLine = tb.rows.length;
     let line = tb.deleteRow(qtdLine - 1);
   }
+
+  
 
   
 
