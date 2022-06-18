@@ -16,7 +16,7 @@ function cadPessoa(nome, sobrenome, email, ra) {
     } else { // se nao existe a pessoa
       msgError.innerHTML = 'Pessoa já cadastrada'; // mostra mensagem de erro
     }
-  });
+  })
   
 
   if(nome === "" || sobrenome === "" || email === "" || ra === "") { // Verifica se os campos estão vazios
@@ -52,8 +52,8 @@ function cadPessoa(nome, sobrenome, email, ra) {
 
   let btn = document.createElement('button');
 
-  let btnDelete = document.createElement('button');
-  btnDelete.innerHTML = 'Deletar';
+  let btnDelete = document.createElement('image');
+    btnDelete.innerHTML = '<div id="delete"><img src="img/delete.svg" alt="delet"></div>';
   btnDelete.setAttribute('onclick', 'deletarPessoa()');
   btnDelete.setAttribute('class', 'btn btn-danger');
   line.appendChild(btnDelete);
@@ -65,5 +65,7 @@ function cadPessoa(nome, sobrenome, email, ra) {
     let qtdLine = tb.rows.length;
     let line = tb.deleteRow(qtdLine - 1);
   }
+
+  
 
  
