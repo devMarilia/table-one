@@ -15,7 +15,7 @@ body {
   --color-secondary: #000;
   --sytle-color: hsl(268, 45%, 41%);
 }
-p {
+#msgError {
   color: red;
   text-align: end;
   padding: 1rem;
@@ -81,6 +81,16 @@ header p {
 #btn:hover{
   background-color: #7a3791;
 }
+#delete{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+#delete img {
+  width: 1.5rem;
+}
 @media screen and (max-width: 980px) {
   form{
       width: 50%;
@@ -108,6 +118,12 @@ header p {
   #btn {
     width: 100%;
     margin-top: 1rem;
+  }
+  #delete{
+    margin-top: 1.5rem;
+  }
+  #valewmsgError {
+    text-align: center;
   }
 }
  
@@ -155,7 +171,7 @@ header p {
 /* Responsive */
 
 @media (max-width: 767px) {
-  p {
+  #msgError{
     color: red;
     text-align: center;
   }
