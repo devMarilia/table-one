@@ -15,6 +15,11 @@ body {
   --color-secondary: #000;
   --sytle-color: hsl(268, 45%, 41%);
 }
+p {
+  color: red;
+  text-align: end;
+  padding: 1rem;
+}
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -150,6 +155,10 @@ header p {
 /* Responsive */
 
 @media (max-width: 767px) {
+  p {
+    color: red;
+    text-align: center;
+  }
     .fl-table {
         display: block;
         width: 100%;
@@ -212,3 +221,4 @@ header p {
         text-align: center;
     }
 }
+
