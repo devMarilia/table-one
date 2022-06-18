@@ -26,19 +26,17 @@ function cadPessoa(nome, sobrenome, email, ra) {
       );
   };
 
-
   if (nome === "" ) { // Verifica se o nome está vazio
     msgError.innerHTML = "Preencha o nome!"; // Exibe mensagem de erro
     return;
     } else if (sobrenome === "" ) { // Verifica se o sobrenome está vazio   (sobrenome)
     msgError.innerHTML = "Preencha o sobrenome!"; // Exibe mensagem de erro
     return;
-  }
-  else if (ra.length !== 8 ) { // Verifica se o RA tem 8 caracteres
-    msgError.innerHTML = `O RA deve ter 8 caracteres!`; // Exibe mensagem de erro
-    return;
-  } else if (!validateEmail(email)) { // Verifica se o email é valido
+  }else if (!validateEmail(email)) { // Verifica se o email é valido
     msgError.innerHTML = "Email inválido!";
+    return;
+  } else if (ra.length !== 8 ) { // Verifica se o RA tem 8 caracteres
+    msgError.innerHTML = `O RA deve ter 8 caracteres!`; // Exibe mensagem de erro
     return;
   } else if (ifExistePessoa.length > 0) { // verifica se existe alguma pessoa com o mesmo nome, sobrenome, email ou ra
     msgError.innerHTML = "Pessoa já cadastrada!"; //se existir, mostra mensagem de erro
@@ -74,6 +72,7 @@ function cadPessoa(nome, sobrenome, email, ra) {
     let qtdLine = tb.rows.length;
     let line = tb.deleteRow(qtdLine - 1);
   }
+  
 
   
 

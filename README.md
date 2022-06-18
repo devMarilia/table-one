@@ -1,11 +1,11 @@
-## Project Tble One
+## Project Table One
 <h1 align="center">
     <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript">🔗 JavaScript</a>
 </h1>
 <p align="center">🚀 lib para construir interfaces dinamicamenente</p> <br>
 
 <h4 align="center"> 
-	🚧  Cadastro de Aluno (Tabçle one) 🚀 Em construção...  🚧
+	🚧  Cadastro de Aluno (Table one) 🚀 Em construção...  🚧
 </h4>
 <p align="center">
 <img src="img/imageTable.png"/>
