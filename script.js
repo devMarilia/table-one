@@ -59,12 +59,19 @@ function cadPessoa(nome, sobrenome, email, ra) {
 
   let btn = document.createElement('button');
 
-  let btnDelete = document.createElement('image');
-    btnDelete.innerHTML = '<div id="delete"><img src="img/delete.svg" alt="delet"></div>';
-  btnDelete.setAttribute('onclick', 'deletarPessoa()');
-  btnDelete.setAttribute('class', 'btn btn-danger');
-  line.appendChild(btnDelete);
-    
+
+
+  let btnDelete = document.createElement('td');
+    btnDelete.innerHTML = 'Delete';
+    btnDelete.setAttribute('onclick', 'deletarPessoa()');
+    btnDelete.setAttribute('class', 'btn btn-danger');
+    line.appendChild(btnDelete);
+
+  let btnEdit = document.createElement('td');
+    btnEdit.innerHTML = 'Editar';
+    btnEdit.setAttribute('onclick', 'editarPessoa()');
+    btnEdit.setAttribute('class', 'btnEdit btn-warning');
+    line.appendChild(btnEdit);
  }
  
   function deletarPessoa() {
@@ -72,7 +79,37 @@ function cadPessoa(nome, sobrenome, email, ra) {
     let qtdLine = tb.rows.length;
     let line = tb.deleteRow(qtdLine - 1);
   }
-  
+
+  function closeModal() {
+    let modal = document.getElementById('modal');
+    modal.style.display = 'none';
+  }
+
+
+  function editarPessoa() {
+    let modal = document.getElementById('modal');
+    modal.style.display = 'flex';
+    let btn = document.getElementById('btn');
+    btn.addEventListener('click', function() {
+      modal.style.display = 'none';
+    }
+    )
+
+    salvarPessoa()
+  }
+
+  //salvar pessoa 
+  function salvarPessoa() {
+    let nome = document.getElementById('nome').value;
+    let sobrenome = document.getElementById('sobrenome').value;
+    let email = document.getElementById('email').value;
+    let ra = document.getElementById('ra').value;
+    cadPessoa(nome, sobrenome, email, ra);
+
+    let modal = document.getElementById('modal');
+    modal.style.display = 'none';
+
+  }
 
   
 

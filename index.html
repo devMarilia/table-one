@@ -40,6 +40,7 @@
             <th>Email</th>
             <th>Ra</th>
             <th>Excluir</th>
+            <th>Editar</th>
           </tr>
         </thead>
         <tbody>
@@ -48,6 +49,21 @@
         <tbody>
       </table>
     </div>
+    <!-- html modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <form name="fEditar" class="edit">
+          <label for="nome">Nome</label>
+          <input type="text" placeholder="Nome" name="txtnome">
+          <label for="sobrenome">Sobrenome</label>
+          <input type="text" placeholder="Sobrenome" name="txtsobrenome">
+          <label for="email">Email</label>
+          <input type="text" placeholder="Email" name="txtemail">
+          <label for="ra">Ra</label>
+          <input type="text" placeholder="Ra" name="txtra">
+          <input type="button" id="btnSalvar" value="Salvar"
+            onclick="editarPessoa(txtnome.value, txtsobrenome.value, txtemail.value, txtra.value)">
   </div>
   <script src="script.js"></script>
 </body>
