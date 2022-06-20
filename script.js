@@ -109,4 +109,5 @@ function salvarPessoa() {
   btn.addEventListener("click", function () {
     modal.style.display = "none";
   });
+  this.closeModal()
 }
