@@ -55,13 +55,13 @@
         <span class="close" onclick="closeModal()">&times;</span>
         <form name="fEditar" class="edit">
           <label for="nome">Nome</label>
-          <input type="text" placeholder="Nome" name="txtnome">
+          <input type="text" id="txtname" name="txtnome">
           <label for="sobrenome">Sobrenome</label>
-          <input type="text" placeholder="Sobrenome" name="txtsobrenome">
+          <input type="text" id="txtsobrenome" name="txtsobrenome">
           <label for="email">Email</label>
-          <input type="text" placeholder="Email" name="txtemail">
+          <input type="text" id="txtemail" name="txtemail">
           <label for="ra">Ra</label>
-          <input type="text" placeholder="Ra" name="txtra">
+          <input type="text" id="txtra" name="txtra">
           <input type="button" id="btnSalvar" value="Salvar"
             onclick="editarPessoa(txtnome.value, txtsobrenome.value, txtemail.value, txtra.value)">
   </div>
